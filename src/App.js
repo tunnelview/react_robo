@@ -1,12 +1,16 @@
 // import logo from './logo.svg';
 import "./App.css";
-import { Button } from "react-bootstrap";
+import { Button, Container, Form } from "react-bootstrap";
+import { SearchForm } from "./components/form/SearchForm";
+import { Title } from "./components/title/Title";
 
 function App() {
   return (
     <div className="wrapper">
-      <div className="title"> Find your Robot Avatar</div>
-      <Button variant="primary">Primary</Button>
+      <Container>
+        <Title />
+        <SearchForm />
+      </Container>
     </div>
   );
 }
