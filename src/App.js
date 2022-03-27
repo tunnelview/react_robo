@@ -8,16 +8,20 @@ import { Favlist } from "./components/list/Favlist";
 
 function App() {
   const [favList, setFavList] = useState(["Shibin", "Shine", "Shhhhs"]);
+
+  const addToFavList = (name) => {
+    setFavList([...favList, name]);
+  };
+
   return (
     <div className="wrapper">
       <Container>
         <Title />
-        <SearchForm />
+        <SearchForm addToFavList={addToFavList} />
         <hr />
         <Favlist favList={favList} />
       </Container>
     </div>
   );
 }
-
 export default App;

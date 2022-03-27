@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Col, Form, Row, Button } from "react-bootstrap";
 import { CustomCard } from "../../card/CustomCard";
 
-export const SearchForm = () => {
+export const SearchForm = ({ addToFavList }) => {
   const [name, setName] = useState("");
   const [robot, setRobot] = useState();
 
@@ -51,7 +51,7 @@ export const SearchForm = () => {
 
       <Row className="mt-5">
         <Col>
-          <CustomCard name={robot} />
+          <CustomCard name={robot} fun={addToFavList} />
           {/* // we need to pass that robot as a props in line 54 and name has
           has to be passed to CustomCard.js */}
         </Col>
