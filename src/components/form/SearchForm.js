@@ -11,13 +11,14 @@ export const SearchForm = () => {
     setName(value);
   };
 
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = async (e) => {
     e.preventDefault();
     // console.log(name);
 
     // Call the fun to call the api
 
-    const robot = fetchRobot(name);
+    // const { data } = await fetchRobot(name);
+    // console.log(data);
   };
 
   return (
