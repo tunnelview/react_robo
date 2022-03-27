@@ -7,12 +7,17 @@ export const SearchForm = () => {
 
   const handleChange = (e) => {
     const { value } = e.target;
+    console.log(value);
     setName(value);
   };
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
+    // console.log(name);
+
+    // Call the fun to call the api
+
+    const robot = fetchRobot(name);
   };
 
   return (
@@ -22,7 +27,7 @@ export const SearchForm = () => {
         <input type="submit" value="Submit" /> */}
         <Row>
           <Col>
-            <Form.Control placeholder="First name" />
+            <Form.Control placeholder="First name" onChange={handleChange} />
           </Col>
           <Col>
             <Button variant="primary" type="submit">
