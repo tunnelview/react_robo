@@ -3,11 +3,23 @@ import { Col, Form, Row, Button } from "react-bootstrap";
 import { CustomCard } from "../../card/CustomCard";
 
 export const SearchForm = () => {
-  const [name, setname] = useState("");
+  const [name, setName] = useState("");
+
+  const handleChange = (e) => {
+    const { value } = e.target;
+    setName(value);
+  };
+
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    console.log(e);
+  };
 
   return (
     <div>
-      <Form>
+      <Form action="" onSubmit={handleOnSubmit}>
+        <input type="text" name="search" onChange={handleChange} />
+        <input type="submit" value="Submit" />
         <Row>
           <Col>
             <Form.Control placeholder="First name" />
