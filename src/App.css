@@ -3,3 +3,10 @@
   color: rgb(223, 71, 134);
   min-height: 100vh;
 }
+
+.robot-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

@@ -5,7 +5,7 @@ const apiUrl = "https://robohash.org/";
 
 export const CustomCard = ({ name }) => {
   return name ? (
-    <Card style={{ width: "18rem" }}>
+    <Card style={{ width: "18rem", marginTop: "1rem" }}>
       <Card.Img variant="top" src={apiUrl + name} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>

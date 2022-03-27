@@ -4,17 +4,21 @@ import { CustomCard } from "../../card/CustomCard";
 
 export const SearchForm = () => {
   const [name, setName] = useState("");
-  const [fetchRobot, setRobot] = useState();
+  const [robot, setRobot] = useState();
 
-  const handleChange = (e) => {
-    const { value } = e.target;
-    console.log(value);
+  const handleChange = (event) => {
+    const { value } = event.target;
+    // console.log(value);
     setName(value);
   };
 
-  // const handleOnSubmit = async (e) => {
-  const handleOnSubmit = (e) => {
-    e.preventDefault();
+  // const handleOnSubmit = async (e) => { // event and e are the same
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
+    console.log(name);
+    setRobot(name);
+    setName("");
+
     // console.log(name);
 
     // Call the fun to call the api
@@ -22,7 +26,7 @@ export const SearchForm = () => {
     // const { data } = await fetchRobot(name);
     // console.log(data);
   };
-
+  console.log(robot);
   return (
     <div>
       <Form action="" onSubmit={handleOnSubmit}>
@@ -30,7 +34,12 @@ export const SearchForm = () => {
         <input type="submit" value="Submit" /> */}
         <Row>
           <Col>
-            <Form.Control placeholder="First name" onChange={handleChange} />
+            <Form.Control
+              placeholder="Search ..."
+              value={name}
+              onChange={handleChange}
+              required
+            />
           </Col>
           <Col>
             <Button variant="primary" type="submit">
@@ -42,7 +51,9 @@ export const SearchForm = () => {
 
       <Row className="mt-5">
         <Col>
-          <CustomCard />
+          <CustomCard name={robot} />
+          {/* // we need to pass that robot as a props in line 54 and name has
+          has to be passed to CustomCard.js */}
         </Col>
       </Row>
     </div>
