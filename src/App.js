@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Favlist } from "./components/list/Favlist";
 
 function App() {
-  const [favList, setFavList] = useState(["Shibin"]);
+  const [favList, setFavList] = useState(["Shibin", "Shine", "Shhhhs"]);
   return (
     <div className="wrapper">
       <Container>
