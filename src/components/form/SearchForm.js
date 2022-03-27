@@ -18,8 +18,8 @@ export const SearchForm = () => {
   return (
     <div>
       <Form action="" onSubmit={handleOnSubmit}>
-        <input type="text" name="search" onChange={handleChange} />
-        <input type="submit" value="Submit" />
+        {/* <input type="text" name="search" onChange={handleChange} />
+        <input type="submit" value="Submit" /> */}
         <Row>
           <Col>
             <Form.Control placeholder="First name" />
