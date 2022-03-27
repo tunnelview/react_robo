@@ -4,6 +4,7 @@ import { CustomCard } from "../../card/CustomCard";
 
 export const SearchForm = () => {
   const [name, setName] = useState("");
+  const [fetchRobot, setRobot] = useState();
 
   const handleChange = (e) => {
     const { value } = e.target;
@@ -11,7 +12,8 @@ export const SearchForm = () => {
     setName(value);
   };
 
-  const handleOnSubmit = async (e) => {
+  // const handleOnSubmit = async (e) => {
+  const handleOnSubmit = (e) => {
     e.preventDefault();
     // console.log(name);
 
