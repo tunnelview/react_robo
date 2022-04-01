@@ -23,6 +23,11 @@ export const SearchForm = ({ addToFavList }) => {
 
     // Call the fun to call the api
 
+    const addAndResetRobo = (name) => {
+      addToFavList(name);
+      setRobot();
+    };
+
     // const { data } = await fetchRobot(name);
     // console.log(data);
   };
